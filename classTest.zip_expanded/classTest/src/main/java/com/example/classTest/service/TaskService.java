@@ -20,21 +20,13 @@ public class TaskService {
 	}
 	
     public String updateTask(int index, String updatedTask) {
-        if (index >= 0 && index < tasks.size()) {
-            tasks.set(index, updatedTask);
-            return "Task updated successfully.";
-        } else {
-            return "Invalid index. Task update failed.";
-        }
+    	this.tasks.set(index, updatedTask);
+    	return "Task Updated";
     }
 
     public String deleteTask(int index) {
-        if (index >= 0 && index < tasks.size()) {
-            tasks.remove(index);
-            return "Task deleted successfully.";
-        } else {
-            return "Invalid index. Task deletion failed.";
-        }
+    	this.tasks.remove(index);
+    	return "Task Deleted";
     }
 	
 	
